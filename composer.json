@@ -1,0 +1,118 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [{
+        "name": "",
+        "role": ""
+    }],
+    "repositories": [{
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "w8tcha/ckeditor_codemirror",
+                "version": "v1.17.7",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin",
+                    "type": "git",
+                    "reference": "v1.17.7"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/tableselection",
+                "version": "4.7.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/tableselection/releases/tableselection_4.7.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/tabletoolstoolbar",
+                "version": "0.0.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/tabletoolstoolbar/releases/tabletoolstoolbar_0.0.1.zip",
+                    "type": "zip"
+                }
+            }
+        }
+
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/admin_toolbar": "^1.24",
+        "drupal/backup_migrate": "^4.0",
+        "drupal/bootstrap_barrio": "^5.1",
+        "drupal/bootstrap_simple_carousel": "^1.43",
+        "drupal/ckeditor_codemirror": "^2.0",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "~8.9",
+        "drupal/paragraphs": "^1.12",
+        "drush/drush": "^9.0.0",
+        "vlucas/phpdotenv": "^2.4",
+        "w8tcha/ckeditor_codemirror": "1.17.7",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+        "drupal/twig_xdebug": "^1.0",
+        "drupal/kint": "^1.2",
+        "webflo/drupal-core-require-dev": "~8.9"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "autoloader-suffix": "Drupal8",
+        "platform": {
+            "php": "7.1"
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/{$name}": ["type:drupal-drush"]
+        }
+    }
+}

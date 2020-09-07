@@ -1,0 +1,22 @@
+uuid: 1bd48dfd-d237-4414-a7d3-061e66c27cbf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - childtheme_barrio
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: childtheme_barrio_content
+theme: childtheme_barrio
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

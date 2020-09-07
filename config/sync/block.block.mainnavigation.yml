@@ -1,0 +1,25 @@
+uuid: 6494797c-90fa-429b-b31c-7aec86ff28ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - childtheme_barrio
+id: mainnavigation
+theme: childtheme_barrio
+region: footer_fifth
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,32 @@
+
+custom_crud_form.form_controller_display:
+  path: '/contact-us/welcome' 
+  defaults:
+    _controller: '\Drupal\custom_crud_form\Controller\CustomCrudController::display'
+    _title: 'Form'
+  requirements:
+    _permission: 'access content'
+
+custom_crud_form.form:
+  path: '/contact-us'
+  defaults:
+    _form: '\Drupal\custom_crud_form\Form\CustomCrudForm'
+    _title: 'Custom Crud Form'
+  requirements:
+    _access: 'TRUE'
+  
+custom_crud_form.delete_form:
+  path: '/contact-us/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\custom_crud_form\Form\DeleteCustomCrudForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'
+  
+custom_crud_form.display_table_controller_display:
+  path: '/contact-us/list'
+  defaults:
+    _controller: '\Drupal\custom_crud_form\Controller\DisplayTableController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'

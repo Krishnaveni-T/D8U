@@ -1,0 +1,30 @@
+uuid: 5ee48012-11e4-4e3d-9282-8add63ac21e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.carousel
+  module:
+    - system
+    - views
+  theme:
+    - childtheme_barrio
+id: views_block__carousel_block_1
+theme: childtheme_barrio
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:carousel-block_1'
+settings:
+  id: 'views_block:carousel-block_1'
+  label: 'Articles you can read: '
+  provider: views
+  label_display: visible
+  views_label: 'Articles you can read: '
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/home\r\n/node/*\r\n/contact-us"
+    negate: false
+    context_mapping: {  }

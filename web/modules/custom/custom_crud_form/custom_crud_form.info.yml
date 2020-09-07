@@ -1,0 +1,6 @@
+name: Custom Form CRUD
+type: module
+description: CRUD operations on a custom form
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

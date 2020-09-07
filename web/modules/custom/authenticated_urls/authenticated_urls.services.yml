@@ -1,0 +1,6 @@
+services:
+  authenticated_urls:
+    class: '\Drupal\authenticated_urls\EventSubscriber\AuthenticatedUrls'
+    arguments: ['@current_user', '@request_stack' , '@language_manager' , '@path.matcher' , '@current_route_match']
+    tags:
+      - { name: 'event_subscriber' }

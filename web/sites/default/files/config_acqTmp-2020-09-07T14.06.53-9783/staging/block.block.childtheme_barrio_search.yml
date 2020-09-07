@@ -1,0 +1,23 @@
+uuid: 81d1c216-ef89-4d4d-a591-0a55cdf84b16
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - childtheme_barrio
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: childtheme_barrio_search
+theme: childtheme_barrio
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

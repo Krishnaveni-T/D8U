@@ -1,0 +1,26 @@
+uuid: 63914b53-7c54-4aa2-b13c-cc10a5f7ee33
+langcode: en
+status: true
+dependencies:
+  module:
+    - bootstrap_simple_carousel
+    - system
+  theme:
+    - childtheme_barrio
+id: bootstrapsimplecarouselblock
+theme: childtheme_barrio
+region: highlighted
+weight: -6
+provider: null
+plugin: bootstrap_simple_carousel_block
+settings:
+  id: bootstrap_simple_carousel_block
+  label: 'Home carousel'
+  provider: bootstrap_simple_carousel
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/home\r\n<front>\r\n/contact-us"
+    negate: false
+    context_mapping: {  }

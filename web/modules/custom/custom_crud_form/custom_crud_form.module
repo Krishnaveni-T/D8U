@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function custom_crud_form_theme() {
+  return [
+    'form_list' => [
+      'template' => 'list',
+      'variables' => [],
+    ],
+  ];
+}

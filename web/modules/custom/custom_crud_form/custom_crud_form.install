@@ -1,0 +1,58 @@
+<?php 
+
+/**
+ * Implements hook_schema().
+ */
+
+function custom_crud_form_schema() {
+  $schema['custom_crud_form'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),
+      'fname'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'lname'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'email'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'mobilenumber'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'country'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'state'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'comments'=>array(
+        'type' => 'varchar',
+        'length' => 250,
+        'not null' => false,
+      ),
+      'pincode'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => false,
+      ), 
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
